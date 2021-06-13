@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/static/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Cadastro</title>
+</head>
+
+<body>
+
+  <div class="container mt-5">
+    <form method="POST" action="">
+      <div class="row">
+        <div class="col-8 form-group">
+          <label class="form-label">
+            Nome
+          </label>
+          <input type="text" class="form-control" name="nome">
+        </div>
+        <div class="col-8 form-group">
+          <label class="form-label">
+            Login
+          </label>
+          <input type="text" class="form-control" name="login">
+        </div>
+        <div class="col-8 form-group">
+          <label class="form-label">
+            Senha
+          </label>
+          <input type="password" class="form-control" name="senha">
+        </div>
+        <div class="col-8 form-group">
+          <label class="form-label">
+            Confirmar Senha
+          </label>
+          <input type="password" class="form-control" name="csenha">
+        </div>
+        <div class="col-8 mt-3">
+          <button type="submit" class="btn btn-success float-end">
+            Salvar
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="/static/dist/umd/popper.min.js"></script>
+  <script src="/static/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
