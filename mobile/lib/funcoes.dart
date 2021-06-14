@@ -2,11 +2,11 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 
+
 class Funcoes{
 
-  static const LISTA_EMISSORA = 1;
-  static const LISTA_PROGRAMA = 2;
-  static const LISTA_OUTRA_COISA = 3;
+  static const LISTA_VEICULO = 1;
+  static const LISTA_MARCA = 2;
 
   void mostrarMensagem(BuildContext context, String tituloMensagem, String corpoMensagem) {
     showDialog(
@@ -29,8 +29,8 @@ class Funcoes{
     Navigator.pop(context);
   }
 
- static String corrigeLinkImagem(String link){
-   return link.replaceAll("~/", "https://60c6aecd19aa1e001769f8e1.mockapi.io/veiculos/");
+  static String corrigeLinkImagem(String link){
+    return link.replaceAll("~/", "https://60c6aecd19aa1e001769f8e1.mockapi.io/veiculos/");
   }
 
   static Widget criarIcone(IconData icone, {Color cor, double tamanho}) {

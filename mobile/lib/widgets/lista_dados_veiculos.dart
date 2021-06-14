@@ -1,10 +1,10 @@
-import 'package:aula08_28_04_2021_json/ui/detalhes_page.dart';
 import 'package:flutter/material.dart';
+import 'package:hackathon/ui/detalhes_page.dart';
 
 import '../funcoes.dart';
 import 'imagem.dart';
 
-class ListaDadosEmissora {
+class ListaDadosVeiculos {
   static void cliqueItem(BuildContext context, Map dados){
     Navigator.push(context, MaterialPageRoute(
         builder: (context) =>DetalhesPage(dados)
@@ -12,11 +12,11 @@ class ListaDadosEmissora {
   }
 
   static Widget criarItem(Map dados){
-   return Row(
+    return Row(
       children:<Widget>[
         Imagem.criarImagemWeb(
-           Funcoes.corrigeLinkImagem(
-               dados["foto"].toString()
+            Funcoes.corrigeLinkImagem(
+                dados["foto"].toString()
             ),
             h: 75, w: 75
         ),

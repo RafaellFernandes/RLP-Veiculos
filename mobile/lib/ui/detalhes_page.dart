@@ -1,35 +1,35 @@
-import 'package:aula08_28_04_2021_json/funcoes.dart';
-import 'package:aula08_28_04_2021_json/widgets/barra_titulo.dart';
-import 'package:aula08_28_04_2021_json/widgets/imagem.dart';
 import 'package:flutter/material.dart';
+import 'package:hackathon/widgets/barra_titulo.dart';
+import 'package:hackathon/widgets/imagem.dart';
+
+import '../funcoes.dart';
 
 class DetalhesPage extends StatelessWidget {
 
-  final Map dadosEmissora;
+  final Map dadosVeiculo;
 
-  DetalhesPage(this.dadosEmissora);
+  DetalhesPage(this.dadosVeiculo);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: BarraTitulo.criar(dadosEmissora["veiculo"]),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
+        appBar: BarraTitulo.criar(dadosVeiculo["veiculo"]),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
             Imagem.criarImagemWeb(
-              Funcoes.corrigeLinkImagem(dadosEmissora["foto"].toString()),
-                //dadosEmissora["foto"].toString(),
+              Funcoes.corrigeLinkImagem(dadosVeiculo["foto"].toString()),
             ),
-          Text("Carro: " + dadosEmissora["veiculo"].toString()),
-          Text("Marca: " + dadosEmissora["marca"].toString()),
-          Text("Cor: " + dadosEmissora["cor"].toString()),
-          Text("Modelo: " + dadosEmissora["tipo"].toString()),
-          Text("Ano: " + dadosEmissora["ano_modelo"].toString()),
-          Text("Preço: " + dadosEmissora["preco"].toString()),
-          Text("Fabricação: " + dadosEmissora["fabricacao"].toString()),
-          Text("Opcionais: " + dadosEmissora["opcionais"].toString()),
+            Text("Carro: " + dadosVeiculo["veiculo"].toString()),
+            Text("Marca: " + dadosVeiculo["marca"].toString()),
+            Text("Cor: " + dadosVeiculo["cor"].toString()),
+            Text("Modelo: " + dadosVeiculo["tipo"].toString()),
+            Text("Ano: " + dadosVeiculo["ano_modelo"].toString()),
+            Text("Preço: " + dadosVeiculo["preco"].toString()),
+            Text("Fabricação: " + dadosVeiculo["fabricacao"].toString()),
+            Text("Opcionais: " + dadosVeiculo["opcionais"].toString()),
 
-        ],
-      )
+          ],
+        )
     );
   }
 }

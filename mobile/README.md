@@ -1,6 +1,6 @@
-# aula08_28_04_2021_json
+# hackathon
 
-A new Flutter application.
+Aplicativo Mobile feito para o Hackathon
 
 ## Getting Started
 

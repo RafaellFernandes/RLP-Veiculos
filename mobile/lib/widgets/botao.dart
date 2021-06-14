@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import '../funcoes.dart';
 
-
 class Botao{
   static Widget criar(String texto, Function clique, {double tamanhoBotao = 150, Color cor = Colors.deepPurple}) {
     return ElevatedButton(

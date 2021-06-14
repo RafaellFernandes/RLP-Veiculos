@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../funcoes.dart';
 
+
 class BarraDrawer {
 
   static Widget criar(BuildContext context, String titulo, Color corFundo, Color corTexto, List<Map> listaItens, {IconData iconeTitulo}) {
