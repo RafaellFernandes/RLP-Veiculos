@@ -4,7 +4,7 @@
         <div class="col-md-12">
           <div class="text-content">
             <h4>Sobre Nós</h4>
-            <h2>RLP Veículos</h2>
+            <h2>RLP Veículos e seus Devs</h2>
           </div>
         </div>
       </div>
@@ -32,7 +32,6 @@
               <li><a href="https://github.com/RafaellFernandes"><i class="fa fa-github"></i></a> Rafael </li>
               <li><a href="https://github.com/leofer28"><i class="fa fa-github"></i></a> Leonardo </li>
               <li><a href="https://github.com/paulohenr95"><i class="fa fa-github"></i></a> Paulo </li>
-              {{-- <li><a href="#"><i class="fa fa-behance"></i></a></li> --}}
             </ul>
           </div>
         </div>

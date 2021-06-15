@@ -48,6 +48,15 @@
                 <li class="nav-item"><a class="nav-link" href="/shop">Loja</a></li>
 
                 <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Carros</a>
+                  
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/novo">Novos</a>
+                    <a class="dropdown-item" href="/seminovo">SemiNovos</a>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mais</a>
                     
                     <div class="dropdown-menu">
@@ -88,6 +97,8 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
     <script src="{{ asset('assets/js/owl.js') }}"></script>
+   
+
     @livewireScripts
   </body>
 </html>

@@ -6,7 +6,9 @@ use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\ContactComponent;
 use App\Http\Livewire\HomeComponent;
+use App\Http\Livewire\NovosComponent;
 use App\Http\Livewire\ProductsDetailsComponent;
+use App\Http\Livewire\SemiNovoComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\TermsComponent;
 use Illuminate\Support\Facades\Route;
@@ -45,3 +47,7 @@ Route::get('/testimonials',TermsComponent::class);
 Route::get('/contact',ContactComponent::class);
 
 Route::get('/productDetails', ProductsDetailsComponent::class);
+
+Route::get('/novo', NovosComponent::class);
+
+Route::get('/seminovo', SemiNovoComponent::class);
