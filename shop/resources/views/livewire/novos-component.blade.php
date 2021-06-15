@@ -12,114 +12,22 @@
     </div>
   </div>
 
-  <div class="products">
+  <div class="products" >
     <div class="container">
       <div class="row">
+        @foreach ($searchResult as $resultado)
         <div class="col-md-4">
           <div class="product-item">
-            <a href="/productDetails/"><img src='http://placeimg.com/640/480' class='card-img-top' width='40' height='auto' alt=''>
+            <a href="/productDetails/{{ $resultado['id'] }}"><img src='{{ $resultado['foto'] }}' class='card-img-top' width='40' height='auto' alt='{{ $resultado['veiculo'] }}'>
               <div class="down-content">
-                  <a href="/productDetails"><h4></h4></a>
-                  <h6><small><del>$999.00 </del></small> R$  </h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
+                  <a href="/productDetails"><h4>{{ $resultado['veiculo'] }}</h4></a>
+                  <h6>R$  {{ $resultado['preco'] }}</h6>
+                  <p>{{ $resultado['opcionais'] }}</p>
               </div>
             </div>
           </div>
-        <div class="col-md-4">
-          <div class="product-item">
-            <a href="/productDetails"><img src="{{ asset('assets/images/product-2-370x270.jpg')}}" alt=""></a>
-            <div class="down-content">
-              <a href="/productDetails"><h4>Lorem ipsum dolor sit amet.</h4></a>
-              <h6><small><del>$99.00</del></small>  $79.00</h6>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non beatae soluta, placeat vitae cum maxime culpa itaque minima.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="product-item">
-            <a href="/productDetails"><img src="{{ asset('assets/images/product-3-370x270.jpg')}}" alt=""></a>
-            <div class="down-content">
-              <a href="/productDetails"><h4>Lorem ipsum dolor sit amet.</h4></a>
-              <h6><small><del>$1999.00</del></small>   $1779.00</h6>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nisi quia aspernatur, harum facere delectus saepe enim?</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="product-item">
-            <a href="/productDetails"><img src="{{ asset('assets/images/product-4-370x270.jpg')}}" alt=""></a>
-            <div class="down-content">
-              <a href="/productDetails"><h4>Lorem ipsum dolor sit amet.</h4></a>
-              <h6><small><del>$999.00 </del></small> $779.00</h6>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="product-item">
-            <a href="/productDetails"><img src="{{ asset('assets/images/product-5-370x270.jpg')}}" alt=""></a>
-            <div class="down-content">
-              <a href="/productDetails"><h4>Lorem ipsum dolor sit amet.</h4></a>
-              <h6><small><del>$99.00</del></small>  $79.00</h6>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non beatae soluta, placeat vitae cum maxime culpa itaque minima.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="product-item">
-            <a href="/productDetails"><img src="{{ asset('assets/images/product-6-370x270.jpg')}}" alt=""></a>
-            <div class="down-content">
-              <a href="/productDetails"><h4>Lorem ipsum dolor sit amet.</h4></a>
-              <h6><small><del>$1999.00</del></small>   $1779.00</h6>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nisi quia aspernatur, harum facere delectus saepe enim?</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-12">
-          <ul class="pages">
-            <li><a href="#">1</a></li>
-            <li class="active"><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
-          </ul>
-        </div>
+          @endforeach
       </div>
+     
     </div>
   </div>
-  <script>
-
-    // async function getContent() { 
-    //   try {
-    //     const response = await fetch('https://mockapi.io/projects/60c6aecd19aa1e001769f8e2/veiculos/')
-    //     //console.log(response)
-    //     const data = await response.json()
-
-    //     //console.log(data)
-    //     show(data)
-
-    //   } catch(error){
-    //     console.error(error);
-    //     console.log('erroo')
-    //   }
-    // }
-
-    // getContent()
-
-    // function show(users){
-
-    //   let output = ''
-
-    //   for ( let user of users ){
-    //     output += `<li>${user.name}</li>`
-    //   }
-
-
-    //   document.querySelector('main').innerHTML = (output)
-    // }
-  </script>

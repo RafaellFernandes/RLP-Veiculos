@@ -15,6 +15,7 @@
      <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
      <link rel="stylesheet" href="{{ asset('assets/css/owl.css')}}">
      @livewireStyles
+
   </head>
 
   <body>
@@ -45,7 +46,7 @@
                     </a>
                 </li> 
 
-                <li class="nav-item"><a class="nav-link" href="/shop">Loja</a></li>
+                {{-- <li class="nav-item"><a class="nav-link" href="/shop">Loja</a></li> --}}
 
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Carros</a>
@@ -67,7 +68,7 @@
                     </div>
                 </li>
                 
-                <li class="nav-item"><a class="nav-link" href="/checkout">Checkout</a></li>
+                {{-- <li class="nav-item"><a class="nav-link" href="/checkout">Checkout</a></li> --}}
 
                 <li class="nav-item"><a class="nav-link" href="/contact">Contate-Nos</a></li>
             </ul>

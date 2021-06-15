@@ -51,3 +51,7 @@ Route::get('/productDetails', ProductsDetailsComponent::class);
 Route::get('/novo', NovosComponent::class);
 
 Route::get('/seminovo', SemiNovoComponent::class);
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

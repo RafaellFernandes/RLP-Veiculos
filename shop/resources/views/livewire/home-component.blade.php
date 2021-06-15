@@ -30,21 +30,23 @@
         <div class="col-md-12">
           <div class="section-heading">
             <h2>Produtos em Destaque</h2>
-            <a href="products.html">Ver Mais<i class="fa fa-angle-right"></i></a>
+            <a href="/shop">Ver Mais<i class="fa fa-angle-right"></i></a>
           </div>
         </div>
+        @foreach ($searchResult as $resultado)
         <div class="col-md-4">
           <div class="product-item">
-            <a href="product-details.html"><img src="{{ asset('assets/images/product-1-370x270.jpg') }}" alt=""></a>
-            <div class="down-content">
-              <a href="product-details.html"><h4>Lorem ipsum dolor sit amet.</h4></a>
-              <h6><small><del>$999.00 </del></small> $779.00</h6>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
+            <a href="/productDetails/{{ $resultado['id'] }}"><img src='{{ $resultado['foto'] }}' class='card-img-top' width='40' height='auto' alt='{{ $resultado['veiculo'] }}'>
+              <div class="down-content">
+                  <a href="/productDetails"><h4>{{ $resultado['veiculo'] }}</h4></a>
+                  <h6>R$  {{ $resultado['preco'] }}</h6>
+                  <p>{{ $resultado['opcionais'] }}</p>
+              </div>
             </div>
           </div>
-        </div>
+          @endforeach
 
-        <div class="col-md-4">
+        {{-- <div class="col-md-4">
           <div class="product-item">
             <a href="product-details.html"><img src="{{ asset('assets/images/product-2-370x270.jpg') }}" alt=""></a>
             <div class="down-content">
@@ -86,9 +88,9 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
             </div>
           </div>
-        </div>
+        </div> --}}
 
-        <div class="col-md-4">
+        {{-- <div class="col-md-4">
           <div class="product-item">
             <a href="product-details.html"><img src="{{ asset('assets/images/product-6-370x270.jpg') }}" alt=""></a>
             <div class="down-content">
@@ -97,7 +99,7 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
             </div>
           </div>
-        </div>
+        </div> --}}
       </div>
     </div>
   </div>
@@ -119,7 +121,7 @@
               <li><a href="https://github.com/leofer28">Leonardo Fernandes</a></li>
               <li><a href="https://github.com/paulohenr95">Paulo Henrique Lopes</a></li>
             </ul>
-            <a href="about-us.html" class="filled-button">Ler Mais</a>
+            <a href="/aboutus" class="filled-button">Ler Mais</a>
           </div>
         </div>
         <div class="col-md-6">
@@ -138,7 +140,7 @@
           <div class="section-heading">
             <h2>Últimos posts do blog</h2>
 
-            <a href="blog.html">Ler Mais <i class="fa fa-angle-right"></i></a>
+            <a href="/blog">Ler Mais <i class="fa fa-angle-right"></i></a>
           </div>
         </div>
 

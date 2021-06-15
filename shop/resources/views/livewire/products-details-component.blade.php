@@ -3,8 +3,8 @@
       <div class="row">
         <div class="col-md-12">
           <div class="text-content">
-            <h4>Lorem ipsum dolor sit amet</h4>
-            <h2>Product Details</h2>
+            {{-- <h4>Lorem ipsum dolor sit amet</h4> --}}
+            <h2>Detalhes do Veículo</h2>
           </div>
         </div>
       </div>
@@ -92,44 +92,28 @@
     </div>
   </div>
 
-  <div class="latest-products">
+  {{-- <div class="latest-products">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="section-heading">
             <h2>Similar Products</h2>
-            <a href="/shop">view more <i class="fa fa-angle-right"></i></a>
+            <a href="/novo">Ver Mais <i class="fa fa-angle-right"></i></a>
           </div>
         </div>
+        @foreach ($searchResult as $resultado)
         <div class="col-md-4">
           <div class="product-item">
-            <a href="/productDetails"><img src="{{ asset('assets/images/product-1-370x270.jpg')}}" alt=""></a>
-            <div class="down-content">
-              <a href="/productDetails"><h4>Omega bicycle</h4></a>
-              <h6><small><del>$999.00 </del></small> $779.00</h6>
+            <a href="/productDetails/{{ $resultado['id'] }}"><img src='{{ $resultado['foto'] }}' class='card-img-top' width='40' height='auto' alt='{{ $resultado['veiculo'] }}'>
+              <div class="down-content">
+                  <a href="/productDetails"><h4>{{ $resultado['veiculo'] }}</h4></a>
+                  <h6>R$  {{ $resultado['preco'] }}</h6>
+                  <p>{{ $resultado['opcionais'] }}</p>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="product-item">
-            <a href="/productDetails"><img src="{{ asset('assets/images/product-2-370x270.jpg')}}" alt=""></a>
-            <div class="down-content">
-              <a href="/productDetails"><h4>Nike Revolution 5 Shoes</h4></a>
-              <h6><small><del>$99.00</del></small>  $79.00</h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="product-item">
-            <a href="/productDetails"><img src="{{ asset('assets/images/product-3-370x270.jpg')}}" alt=""></a>
-            <div class="down-content">
-              <a href="/productDetails"><h4>Treadmill Orion Sprint</h4></a>
-              <h6><small><del>$1999.00</del></small>   $1779.00</h6>
-            </div>
-          </div>
-        </div>
+          @endforeach
+       
       </div>
     </div>
-  </div>
+  </div> --}}
