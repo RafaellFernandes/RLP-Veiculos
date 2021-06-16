@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "root",
+    "password": "",
+    "database": "rlpveiculos",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

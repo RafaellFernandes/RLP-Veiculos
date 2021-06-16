@@ -1,0 +1,16 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+iframe {
+	margin: 10px 0;
+	border: 1px solid #ccc;
+}
+
+.margin, label {
+	margin-top: 15px;
+}
