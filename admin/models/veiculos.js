@@ -16,12 +16,12 @@ module.exports = (Sequelize, DataType) => {
 
       ano_modelo: {
         allowNull: false,
-        type: DataType.YEAR(4)
+        type: DataType.DATEONLY(4)
       },
 
       ano_fabricacao: {
         allowNull: false,
-        type: DataType.YEAR(4)
+        type: DataType.DATEONLY(4)
       },
 
       valor: {
@@ -30,52 +30,49 @@ module.exports = (Sequelize, DataType) => {
       },
 
       tipo: {
-        allowNull: false,
-        type: DataType.ENUM('novo', 'seminovo')
+        allowNull: true,
+        type: DataType.ENUM('tipo')
       },
 
       foto_destaque: {
-        allowNull: false,
+        allowNull: true,
         type: DataType.STRING(50)
       },
 
       marca_id: {
         allowNull: false,
-        type: DataType.INTEGER,
-        references: {
-          model: 'Marcas',
-          key: 'id'
-        },
-        onUpdate: 'cascade',
-        onDelete: 'cascade'
+        type: DataType.INTEGER
       },
 
       cor_id: {
         allowNull: false,
-        type: DataType.INTEGER,
-        references: {
-          model: 'Cores',
-          key: 'id'
-        },
-        onUpdate: 'cascade',
-        onDelete: 'cascade'
+        type: DataType.INTEGER
       },
 
       usuario_id: {
         allowNull: false,
-        type: DataType.INTEGER,
-        references: {
-          model: 'Usuarios',
-          key: 'id'
-        },
-        onUpdate: 'cascade',
-        onDelete: 'cascade'
+        type: DataType.INTEGER
       },
 
       opcionais: {
         type: DataType.TEXT
       }
   });
+
+  Veiculos.associate = models => {
+
+    Veiculos.belongsTo(models.Marcas, {
+      foreignKey: 'marca_id', as: 'marca'
+    });
+
+    Veiculos.belongsTo(models.Cores, {
+      foreignKey: 'cor_id', as: 'cor'
+    });
+
+    Veiculos.belongsTo(models.Usuarios, {
+      foreignKey: 'usuario_id', as: 'usuario'
+    });
+  };
 
   return Veiculos;
 }

@@ -1,9 +1,7 @@
-const express=require('express');
-const router=express.Router();
-const veiculos=require('../../controllers/veiculos/find');
+const express = require('express');
+const router = express.Router();
+const veiculos = require('../../controllers/veiculos/find');
 
+router.get('/', veiculos.view);
 
-router.get('/',veiculos.view);
-
-module.exports=router;
-
+module.exports = router;

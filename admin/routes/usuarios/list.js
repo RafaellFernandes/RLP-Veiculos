@@ -1,7 +1,7 @@
-const express=require('express');
-const router=express.Router();
-const find=require('../../controllers/usuarios/list');
+const express = require('express');
+const router = express.Router();
+const find = require('../../controllers/usuarios/find');
 
-router.get('/',find.show);
+router.get('/', find.show);
 
-module.exports=router;
+module.exports = router;

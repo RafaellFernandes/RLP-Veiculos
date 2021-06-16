@@ -1,15 +1,34 @@
-const {Marcas}=require('../../models');
+const {Marcas} = require('../../models');
 
-module.exports={
+module.exports = {
 
-    save:async (req,res)=>{
+    save: async (req, res) => {
 
-        const data={
-            marca:req.body.marca,
-            ativo:true
+        const marca = req.body.marca;
+
+        const data = {
+            marca: req.body.marca
         }
 
-        const result=await Marcas.create(data);
+        if (marca.length < 3 ) {
+            return res.json({
+                message: "Marca inválida"
+            });
+        }
+
+        let marcaExiste = await Marcas.findOne({
+            where: { marca: marca }
+        });
+
+        if (marcaExiste) {
+            return res.json({
+                message: "A marca já foi registrado!"
+            });
+        }
+
+        const results = await Marcas.create(data);
+
+        console.log(results);
 
         res.redirect('/marcas');
     }

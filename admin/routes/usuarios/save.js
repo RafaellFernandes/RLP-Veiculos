@@ -1,7 +1,7 @@
-const express=require('express');
-const router=express.Router();
-const usuarios=require('../../controllers/usuarios/insert')
+const express = require('express');
+const router = express.Router();
+const usuarios = require('../../controllers/usuarios/insert')
 
-router.post('/',usuarios.save);
+router.post('/', usuarios.save);
 
-module.exports=router;
+module.exports = router;

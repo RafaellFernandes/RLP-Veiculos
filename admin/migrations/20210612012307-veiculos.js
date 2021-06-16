@@ -31,12 +31,12 @@ module.exports = {
       },
 
       tipo: {
-        allowNull: false,
-        type: Sequelize.ENUM('novo', 'seminovo')
+        allowNull: true,
+        type: Sequelize.ENUM('tipo')
       },
 
       foto_destaque: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING(50)
       },
 
@@ -46,9 +46,7 @@ module.exports = {
         references: {
           model: 'Marcas',
           key: 'id'
-        },
-        onUpdate: 'cascade',
-        onDelete: 'cascade'
+        }
       },
 
       cor_id: {
@@ -57,9 +55,7 @@ module.exports = {
         references: {
           model: 'Cores',
           key: 'id'
-        },
-        onUpdate: 'cascade',
-        onDelete: 'cascade'
+        }
       },
 
       usuario_id: {
@@ -68,9 +64,7 @@ module.exports = {
         references: {
           model: 'Usuarios',
           key: 'id'
-        },
-        onUpdate: 'cascade',
-        onDelete: 'cascade'
+        }
       },
 
       opcionais: {

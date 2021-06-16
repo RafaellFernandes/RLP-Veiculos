@@ -1,7 +1,7 @@
-const express=require('express');
-const router=express.Router();
-const edit=require('../../controllers/usuarios/edit');
+const express = require('express');
+const router = express.Router();
+const edit = require('../../controllers/usuarios/edit');
 
-router.get('/:id',edit.show);
+router.get('/:id', edit.show);
 
-module.exports=router;
+module.exports = router;

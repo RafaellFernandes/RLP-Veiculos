@@ -1,34 +1,38 @@
-const {Usuarios} =require('../models');
-const bcrypt=require('bcryptjs');
+const {Usuarios} = require('../../models');
+const bcrypt = require('bcryptjs');
 
 
-module.exports={
+module.exports = {
 
-    check:async(req,res)=>{
-        const login=req.body.login;
-        const senha=req.body.senha;
+    check: async (req, res) => {
+
+        const login = req.body.login;
+        const senha = req.body.senha;
         
-        const result=await Usuarios.findOne(
-            {where:{
-                login:login
+        const results = await Usuarios.findOne({
+            where: {
+                login: login
             }
-        }
-        );
+        });
 
-        if(result === null){
-            let message={message:'Login não encontrado'};
+        if (results === null) {
+            return res.json({
+                message: "Login inválido!"
+            });
 
-            res.render('error',message);
-        }else{
-            let compara=await bcrypt.compare(senha,result.senha);
-
-            if(compara===true){
+        } else {
+            let compara = await bcrypt.compare(senha, results.senha);
+    
+            if (compara === true) {
                 res.redirect('/');
+                return res.json({
+                    message: "Logado!"
+                });
+            } else {
+                return res.json({
+                    message: "Senha inválida!"
+                });
             }
-
         }
-
-        
-        
     }
 }
