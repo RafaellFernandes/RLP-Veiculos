@@ -29,8 +29,9 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section-heading">
-            <h2>Produtos em Destaque</h2>
-            <a href="/shop">Ver Mais<i class="fa fa-angle-right"></i></a>
+            <h2>Veículos em Destaque</h2>
+            <a href="/novo">Novos<i class="fa fa-angle-right"></i></a><br>
+            <a href="/seminovo">Seminovos<i class="fa fa-angle-right"></i></a>
           </div>
         </div>
         @foreach ($searchResult as $resultado)
@@ -40,7 +41,8 @@
               <div class="down-content">
                   <a href="/productDetails"><h4>{{ $resultado['veiculo'] }}</h4></a>
                   <h6>R$  {{ $resultado['preco'] }}</h6>
-                  <p>{{ $resultado['opcionais'] }}</p>
+                  <p>Marca: {{ $resultado['marca'] }}</p>
+                  <p>Opcionais: {{ $resultado['opcionais'] }}</p>
               </div>
             </div>
           </div>

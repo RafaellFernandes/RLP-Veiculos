@@ -22,7 +22,8 @@
               <div class="down-content">
                   <a href="/productDetails"><h4>{{ $resultado['veiculo'] }}</h4></a>
                   <h6>R$  {{ $resultado['preco'] }}</h6>
-                  <p>{{ $resultado['opcionais'] }}</p>
+                  <p>Marca: {{ $resultado['marca'] }}</p>
+                  <p>Opcionais: {{ $resultado['opcionais'] }}</p>
               </div>
             </div>
           </div>
