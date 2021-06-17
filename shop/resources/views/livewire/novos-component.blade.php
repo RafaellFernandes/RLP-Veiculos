@@ -18,7 +18,7 @@
         @foreach ($searchResult as $resultado)
         <div class="col-md-4">
           <div class="product-item">
-            <a href="/productDetails/{{ $resultado['id'] }}"><img src='{{ $resultado['foto_destaque'] }}' class='card-img-top' width='40' height='auto' alt='{{ $resultado['modelo'] }}'>
+            <a href="/productDetails/{{ $resultado['id'] }}"><img src='fotos/{{ $resultado['foto_destaque'] }}' class='card-img-top' width='40' height='auto' alt='{{ $resultado['modelo'] }}'>
               <div class="down-content">
                   <a href="/productDetails"><h4>{{ $resultado['modelo'] }}</h4></a>
                   <h6>R$  {{ $resultado['valor'] }}</h6>

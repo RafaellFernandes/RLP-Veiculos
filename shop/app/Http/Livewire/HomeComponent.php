@@ -11,7 +11,7 @@ class HomeComponent extends Component
 
     public function render()
     {
-        $response =  Http::get('https://60c6aecd19aa1e001769f8e1.mockapi.io/veiculos');
+        $response =  Http::get('http://localhost:3000/api/veiculos');
         $this->searchResult = $response->json();
         return view('livewire.home-component')->layout('layouts.base');
     }
