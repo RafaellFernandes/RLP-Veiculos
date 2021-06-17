@@ -154,13 +154,11 @@
 							<tr>
 								<th>Foto</th>
 								<th>Modelo</th>
-								<th>Ano Modelo</th>
 								<th>Ano Fabricação</th>
 								<th>Valor</th>
 								<th>Tipo</th>
 								<th>Marca</th>
 								<th>Cor</th>
-								<th>Opcionais</th>
 
 								<th>Editar</th>
 								<th>Excluir</th>
@@ -168,21 +166,19 @@
 						</thead>
 						<tbody>
 							<% for (let d of data) {%>
+								
 								<tr>
 									<td>
-										<%= d.foto_destaque %>
+										<img class="foto" src="/static/images/uploads/<%= d.foto_destaque %>">
 									</td>
 									<td>
 										<%= d.modelo %>
 									</td>
 									<td>
-										<%= d.ano_modelo %>
-									</td>
-									<td>
 										<%= d.ano_fabricacao %>
 									</td>
 									<td>
-										<%= d.valor %>
+										<%= d.valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}); %>
 									</td>
 									<td>
 										<%= d.tipo %>
@@ -193,11 +189,9 @@
 									<td>
 										<%= d.cor_id %>
 									</td>
-									<td>
-										<%= d.opcionais %>
-									</td>
 
 									<td>
+										
 										<a href="/edit-veiculos/<%= d.id %>" class="btn btn-outline-warning">
 											<i class="fa fa-edit"></i>
 										</a>
@@ -317,13 +311,11 @@
 							<tr>
 								<td>${d.foto}</td>
 								<td>${d.modelo}</td>
-                                <td>${d.ano_modelo}</td>
 								<td>${d.ano_fabricacao}</td>
                                 <td>${d.valor}</td>
 								<td>${d.tipo}</td>
-                                <td>${d.marca}</td>
-								<td>${d.cor}</td>
-                                <td>${d.opcionais}</td>
+                                <td>${d.marca_id}</td>
+								<td>${d.cor_id}</td>
 								<td>
 									<a href="/edit-veiculos/${d.id}" class="btn btn-outline-warning">
 										<i class="fa fa-edit"></i>

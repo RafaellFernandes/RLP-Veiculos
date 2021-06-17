@@ -14,3 +14,13 @@ iframe {
 .margin, label {
 	margin-top: 15px;
 }
+
+.foto {
+	width: 100%;
+	height: 100%;
+	max-width: 100px;
+	max-height: 100px;
+	object-fit: contain;
+	min-width: 100px;
+	min-height: 100px;
+}

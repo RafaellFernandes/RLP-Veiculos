@@ -27,7 +27,7 @@ module.exports = {
                 message: "A marca já foi registrado!"
             });
         }
-        
+
         let update = await Marcas.update(data,{
             where: {id: param}
         });

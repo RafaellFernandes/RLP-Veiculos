@@ -1,61 +1,33 @@
 'use strict';
 
-module.exports = (Sequelize, DataType) => {
+module.exports = (Sequelize, DataTypes) => {
   const Veiculos = Sequelize.define('Veiculos', {
-    id: {
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
-        type: DataType.INTEGER
-      },
-
       modelo: {
-        allowNull: false,
-        type: DataType.STRING(50)
+        type: DataTypes.STRING(50)
       },
 
       ano_modelo: {
-        allowNull: false,
-        type: DataType.DATEONLY(4)
+        type: DataTypes.INTEGER(4)
       },
 
       ano_fabricacao: {
-        allowNull: false,
-        type: DataType.DATEONLY(4)
+        type: DataTypes.INTEGER(4)
       },
 
       valor: {
-        allowNull: false,
-        type: DataType.DOUBLE
+        type: DataTypes.DOUBLE
       },
 
       tipo: {
-        allowNull: true,
-        type: DataType.ENUM('tipo')
+        type: DataTypes.STRING(8)
       },
 
       foto_destaque: {
-        allowNull: true,
-        type: DataType.STRING(50)
-      },
-
-      marca_id: {
-        allowNull: false,
-        type: DataType.INTEGER
-      },
-
-      cor_id: {
-        allowNull: false,
-        type: DataType.INTEGER
-      },
-
-      usuario_id: {
-        allowNull: false,
-        type: DataType.INTEGER
+        type: DataTypes.STRING(50)
       },
 
       opcionais: {
-        type: DataType.TEXT
+        type: DataTypes.TEXT
       }
   });
 
