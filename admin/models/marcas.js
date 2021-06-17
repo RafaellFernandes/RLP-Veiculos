@@ -1,19 +1,19 @@
 'use strict';
 
-module.exports = (Sequelize, DataType) => {
+module.exports = (Sequelize, DataTypes) => {
   const Marcas = Sequelize.define('Marcas', {
-    id: {
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-      type: DataType.INTEGER
-    },
-
     marca: {
-      allowNull: false,
-      type: DataType.STRING(50)
+      type: DataTypes.STRING(50)
     }
   });
+
+  Marcas.associate = models => {
+
+    Marcas.hasMany(models.Veiculos, {
+      as: 'veiculos'
+    });
+
+  };
 
   return Marcas;
 }

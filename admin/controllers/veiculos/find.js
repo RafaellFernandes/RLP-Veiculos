@@ -1,4 +1,4 @@
-const {Veiculos} = require('../../models');
+const {Veiculos, Marcas, Cores} = require('../../models');
 
 module.exports = {
 
@@ -12,9 +12,10 @@ module.exports = {
     },
 
     view: async (req, res) => {
+
         const results = await Veiculos.findAll({
-            attributes: ['id', 'modelo', 'ano_modelo', 'ano_fabricacao', 'valor',
-             'tipo', 'foto_destaque', 'marca_id', 'cor_id', 'usuario_id', 'opcionais']
+            attributes: ['id', 'modelo', 'ano_fabricacao', 'valor',
+             'tipo', 'foto_destaque', 'marca_id', 'cor_id', 'opcionais']
         });
 
         res.render('veiculos/veiculos', {data: results});

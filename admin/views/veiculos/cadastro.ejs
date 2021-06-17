@@ -148,26 +148,27 @@
 				<!-- End of Topbar -->
 
 				<!-- Begin Page Content -->
-				<div class="container-fluid">
-					<form method="POST" action="/save-veiculos">
+				<div class="container-fluid" id="mainform">
+					<form method="POST" action="/save-veiculos" enctype="multipart/form-data">
 						<div class="row">
+							
 							<div class="col-8 form-group">
 								<label class="form-label">
 									Modelo
 								</label>
-								<input type="text" name="modelo" class="form-control" maxlength="50" required>
+								<input type="text" name="modelo" class="form-control" maxlength="30" required>
 							</div>
 							<div class="col-8 form-group">
 								<label class="form-label">
 									Ano do Modelo
 								</label>
-								<input type="number" name="ano_modelo" class="form-control" maxlength="4" required>
+								<input type="number" name="ano_modelo" class="form-control" maxlength="4">
 							</div>
 							<div class="col-8 form-group">
 								<label class="form-label">
 									Ano de Fabricação
 								</label>
-								<input type="number" name="ano_fabricacao" class="form-control" maxlength="4" required>
+								<input type="number" name="ano_fabricacao" class="form-control" maxlength="4">
 							</div>
 							<div class="col-8 form-group">
 								<label class="form-label">
@@ -179,37 +180,50 @@
 								<label class="form-label">
 									Tipo (novo ou seminovo)
 								</label>
-								<input type="text" name="tipo" class="form-control" maxlength="8" minlength="4">
-								<!--<select name="tipo" class="form-control">
+								
+								<select name="tipo" class="form-control">
 									<option value="novo">Novo</option>
-									<option value="seminovo">Seminovo</option>-->
+									<option value="seminovo">Seminovo</option>
 								</select>
 							</div>
-							<form class="mt-4" action="/upload" method="POST" enctype="multipart/form-data">
 								<div class="col-8 form-group">
 									<label class="form-label">
 										Foto
 									</label>
-									<input type="file" name="foto_destaque" class="form-control-file border">
+									<input type="file" name="uploaded_image" class="form-control-file border">
 								</div>
-							</form>
 							<div class="col-8 form-group">
 								<label class="form-label">
 									Marca
 								</label>
-								<input type="text" name="marca_id" class="form-control" required>
+								<select name="marca_id" class="form-control">
+									<option value="1">bmw</option>
+									<option value="2">toyota</option>
+									<option value="3">honda</option>
+									<option value="4">ford</option>
+									<option value="5">fiat</option>
+									<option value="6">chevrolet</option>
+								</select>
 							</div>
 							<div class="col-8 form-group">
 								<label class="form-label">
 									Cor
 								</label>
-								<input type="text" name="cor_id" class="form-control" required>
+								<select name="cor_id" class="form-control">
+									<option value="1">prata</option>
+									<option value="2">preto</option>
+									<option value="3">branco</option>
+									<option value="4">vermelho</option>
+								</select>
 							</div>
 							<div class="col-8 form-group">
 								<label class="form-label">
 									Quem está registrando
 								</label>
-								<input type="text" name="usuario_id" class="form-control" required>
+								<select name="usuario_id" class="form-control">
+									<option value="1">admin</option>
+									<option value="2">usuario</option>
+								</select>
 							</div>
 							<div class="col-8 form-group">
 								<label class="form-label">

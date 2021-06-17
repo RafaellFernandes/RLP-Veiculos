@@ -16,13 +16,13 @@ module.exports = {
       },
 
       ano_modelo: {
-        allowNull: false,
-        type: Sequelize.DATEONLY(4)
+        allowNull: true,
+        type: Sequelize.INTEGER(4)
       },
 
       ano_fabricacao: {
-        allowNull: false,
-        type: Sequelize.DATEONLY(4)
+        allowNull: true,
+        type: Sequelize.INTEGER(4)
       },
 
       valor: {
@@ -31,8 +31,8 @@ module.exports = {
       },
 
       tipo: {
-        allowNull: true,
-        type: Sequelize.ENUM('tipo')
+        allowNull: false,
+        type: Sequelize.STRING(8)
       },
 
       foto_destaque: {
@@ -46,7 +46,9 @@ module.exports = {
         references: {
           model: 'Marcas',
           key: 'id'
-        }
+        },
+        onUpdate: 'cascade',
+        onDelete: 'cascade'
       },
 
       cor_id: {
@@ -55,7 +57,9 @@ module.exports = {
         references: {
           model: 'Cores',
           key: 'id'
-        }
+        },
+        onUpdate: 'cascade',
+        onDelete: 'cascade'
       },
 
       usuario_id: {
@@ -64,7 +68,9 @@ module.exports = {
         references: {
           model: 'Usuarios',
           key: 'id'
-        }
+        },
+        onUpdate: 'cascade',
+        onDelete: 'cascade'
       },
 
       opcionais: {
