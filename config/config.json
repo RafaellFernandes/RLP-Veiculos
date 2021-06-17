@@ -1,16 +1,16 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "rlpveiculos",
-    "host": "127.0.0.1",
+    "username": "tq9hZHGqEI",
+    "password": "3ir15o3LFZ",
+    "database": "tq9hZHGqEI",
+    "host": "remotemysql.com",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "rlpveiculos",
-    "host": "127.0.0.1",
+    "username": "tq9hZHGqEI",
+    "password": "3ir15o3LFZ",
+    "database": "tq9hZHGqEI",
+    "host": "remotemysql.com",
     "dialect": "mysql"
   }
 }
