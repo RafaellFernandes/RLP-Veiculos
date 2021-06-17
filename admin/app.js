@@ -109,10 +109,6 @@ app.use('/trash-veiculos', trashVeiculosRouter);
 //API
 app.get('/api/veiculos', ControllerVeiculo.findAll);
 app.get('/api/veiculos/:id', ControllerVeiculo.findById);
-// app.get('/api/veiculosNovo', ControllerVeiculo.view);
-app.get('/api/veiculosSeminovo', ControllerVeiculo.view2);
-// app.get('/api/veiculosNovo', ControllerVeiculo.findByTipoNovo);
-// app.get('/api/veiculosSeminovo', ControllerVeiculo.view);
 
 
 // catch 404 and forward to error handler

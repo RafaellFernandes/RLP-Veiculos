@@ -43,28 +43,7 @@ module.exports = {
     //     } catch (error) {
     //         console.log(error);
     //     }
-    // },
-
-    // view: async (req, res) => {
-
-    //     const results = await Veiculos.findOne({
-    //         where: {
-    //             tipo: 'novo'
-    //         }
-    //     });
-    
-    //     res.render('veiculos/veiculos', {data: results});
-    // },
-
-    // view2: async (req, res) => {
-
-    //     const results = await db.query({
-    //         where: {
-    //             tipo: 'seminovo'
-    //         }
-    //     });
-    
-    //     res.render('veiculos/veiculos', {data: results});
     // }
 
+   
 }
