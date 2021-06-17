@@ -10,7 +10,7 @@ class NovosComponent extends Component
     public $searchResult = [];
 
     public function render(){
-        $response =  Http::get('https://60c6aecd19aa1e001769f8e1.mockapi.io/veiculos');
+        $response =  Http::get('http://localhost:3000/veiculosApi');
         $this->searchResult = $response->json();
         return view('livewire.novos-component')->layout('layouts.base');
     }
