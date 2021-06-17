@@ -58,6 +58,7 @@ app.use(cookieParser());
 app.use(fileUpload());
 
 app.use('/static',express.static(path.resolve('./public')));
+app.use(express.static('public'));
 app.use('/static',express.static(path.resolve('./node_modules/bootstrap')));
 app.use('/static',express.static(path.resolve('./node_modules/@popperjs/core')));
 app.use('/static',express.static(path.resolve('./node_modules/@fortawesome/fontawesome-free')));
