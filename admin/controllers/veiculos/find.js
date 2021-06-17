@@ -11,6 +11,7 @@ module.exports = {
         res.json(results);
     },
 
+
     view: async (req, res) => {
 
         const results = await Veiculos.findAll({

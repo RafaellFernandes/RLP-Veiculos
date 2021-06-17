@@ -20,7 +20,8 @@ module.exports = {
             return res.status(400).send('Nenhuma imagem foi enviada.');
 
         var file = req.files.uploaded_image;
-        var img_name = file.name;
+        
+        var img_name = "static/images/uploads/" + file.name;
 
         if (file.mimetype == "image/jpeg" || file.mimetype == "image/png") {
 
