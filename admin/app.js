@@ -45,9 +45,6 @@ const listVeiculosRouter = require('./routes/veiculos/list');
 const updateVeiculosRouter = require('./routes/veiculos/update');
 const trashVeiculosRouter = require('./routes/veiculos/trash');
 
-//Instancia da API
-const ControllerVeiculo = require('./controllers/ControllerVeiculo');
-
 const app = express();
 
 // view engine setup
@@ -104,17 +101,6 @@ app.use('/edit-veiculos', editVeiculosRouter);
 app.use('/list-veiculos', listVeiculosRouter);
 app.use('/update-veiculos', updateVeiculosRouter);
 app.use('/trash-veiculos', trashVeiculosRouter);
-
-//API
-app.get('/api/veiculos', ControllerVeiculo.findAll);
-app.get('/api/veiculos/:id', ControllerVeiculo.findById);
-app.get('/api/veiculosNovo', ControllerVeiculo.view);
-app.get('/api/veiculosSeminovo', ControllerVeiculo.view2);
-// app.get('/api/veiculosNovo', ControllerVeiculo.findByTipoNovo);
-// app.get('/api/veiculosSeminovo', ControllerVeiculo.view);
-
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

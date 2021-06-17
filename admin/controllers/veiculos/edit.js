@@ -8,7 +8,7 @@ module.exports = {
 
         const results = await Veiculos.findOne({
             where: {id: param},
-            attributes: ['id', 'modelo', 'marca', 'ano_modelo', 'ano_fabricacao', 'valor',
+            attributes: ['id', 'modelo', 'ano_modelo', 'ano_fabricacao', 'valor',
              'tipo', 'foto_destaque', 'marca_id', 'cor_id', 'usuario_id', 'opcionais']
         });
 
