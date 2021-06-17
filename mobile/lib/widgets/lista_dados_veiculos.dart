@@ -16,14 +16,14 @@ class ListaDadosVeiculos {
       children:<Widget>[
         Imagem.criarImagemWeb(
             Funcoes.corrigeLinkImagem(
-                dados["foto"].toString()
+                dados["foto_destaque"].toString()
             ),
             h: 75, w: 75
         ),
         Expanded(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
-            child:  Text(dados["veiculo"].toString(),
+            child:  Text(dados["modelo"].toString(),
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
           ),
         ),

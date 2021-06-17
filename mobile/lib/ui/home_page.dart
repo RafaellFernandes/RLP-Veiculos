@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           Expanded(
             child: FutureBuilder(
-              future: Funcoes.getListaJson("https://60c6aecd19aa1e001769f8e1.mockapi.io/veiculos/"),
+              future: Funcoes.getListaJson("http://192.168.3.18:3000/api/veiculos/"),
               builder: (context, snapshot) {
                 switch (snapshot.connectionState) {
                   case ConnectionState.waiting:

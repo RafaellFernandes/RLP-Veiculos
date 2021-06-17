@@ -30,7 +30,7 @@ class Funcoes{
   }
 
   static String corrigeLinkImagem(String link){
-    return link.replaceAll("~/", "https://60c6aecd19aa1e001769f8e1.mockapi.io/veiculos/");
+    return link.replaceAll("~/", "http://192.168.3.18:3000/api/veiculos/");
   }
 
   static Widget criarIcone(IconData icone, {Color cor, double tamanho}) {
@@ -47,6 +47,7 @@ class Funcoes{
   static Future<List<dynamic>> getListaJson(String link) async {
     //com _ é um metodo private
     // sem a underline é um metodo public
+
 
     Uri uri = Uri.parse(link);
     http.Response response = await http.get(uri);
