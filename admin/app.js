@@ -7,9 +7,6 @@ const fileUpload = require('express-fileupload');
 
 const indexRouter = require('./routes/index');
 
-//Instancia da API
-const ControllerVeiculo = require('./controllers/ControllerVeiculo');
-
 //instancias das rotas de usuário
 const usuariosRouter = require('./routes/usuarios/usuarios');
 const cadastroUsuariosRouter = require('./routes/usuarios/cadastro');
@@ -61,6 +58,7 @@ app.use(cookieParser());
 app.use(fileUpload());
 
 app.use('/static',express.static(path.resolve('./public')));
+app.use(express.static('public'));
 app.use('/static',express.static(path.resolve('./node_modules/bootstrap')));
 app.use('/static',express.static(path.resolve('./node_modules/@popperjs/core')));
 app.use('/static',express.static(path.resolve('./node_modules/@fortawesome/fontawesome-free')));
@@ -104,15 +102,6 @@ app.use('/edit-veiculos', editVeiculosRouter);
 app.use('/list-veiculos', listVeiculosRouter);
 app.use('/update-veiculos', updateVeiculosRouter);
 app.use('/trash-veiculos', trashVeiculosRouter);
-
-//API
-app.get('/api/veiculos', ControllerVeiculo.findAll);
-app.get('/api/veiculos/:id', ControllerVeiculo.findById);
-// app.get('/api/veiculosNovo', ControllerVeiculo.view);
-// app.get('/api/veiculosSeminovo', ControllerVeiculo.view2);
-// app.get('/api/veiculosNovo', ControllerVeiculo.findByTipoNovo);
-// app.get('/api/veiculosSeminovo', ControllerVeiculo.view);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
