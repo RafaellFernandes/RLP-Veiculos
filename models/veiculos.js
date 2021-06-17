@@ -7,11 +7,11 @@ module.exports = (Sequelize, DataTypes) => {
       },
 
       ano_modelo: {
-        type: DataTypes.DATEONLY
+        type: DataTypes.INTEGER(4)
       },
 
       ano_fabricacao: {
-        type: DataTypes.DATEONLY
+        type: DataTypes.INTEGER(4)
       },
 
       valor: {

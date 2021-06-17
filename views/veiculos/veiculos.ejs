@@ -159,7 +159,6 @@
 								<th>Tipo</th>
 								<th>Marca</th>
 								<th>Cor</th>
-								<th>Opcionais</th>
 
 								<th>Editar</th>
 								<th>Excluir</th>
@@ -170,7 +169,7 @@
 								
 								<tr>
 									<td>
-										<%= d.foto_destaque %>
+										<img class="foto" src="/static/images/uploads/<%= d.foto_destaque %>">
 									</td>
 									<td>
 										<%= d.modelo %>
@@ -179,7 +178,7 @@
 										<%= d.ano_fabricacao %>
 									</td>
 									<td>
-										<%= d.valor %>
+										<%= d.valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}); %>
 									</td>
 									<td>
 										<%= d.tipo %>
@@ -190,11 +189,9 @@
 									<td>
 										<%= d.cor_id %>
 									</td>
-									<td>
-										<%= d.opcionais %>
-									</td>
 
 									<td>
+										
 										<a href="/edit-veiculos/<%= d.id %>" class="btn btn-outline-warning">
 											<i class="fa fa-edit"></i>
 										</a>
@@ -319,7 +316,6 @@
 								<td>${d.tipo}</td>
                                 <td>${d.marca_id}</td>
 								<td>${d.cor_id}</td>
-                                <td>${d.opcionais}</td>
 								<td>
 									<a href="/edit-veiculos/${d.id}" class="btn btn-outline-warning">
 										<i class="fa fa-edit"></i>

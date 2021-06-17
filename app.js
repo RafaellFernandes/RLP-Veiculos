@@ -3,8 +3,10 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const fileUpload = require('express-fileupload');
 
 const indexRouter = require('./routes/index');
+const imagesRouter = require('./routes/images');
 
 //instancias das rotas de usuário
 const usuariosRouter = require('./routes/usuarios/usuarios');
@@ -54,6 +56,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(fileUpload());
 
 app.use('/static',express.static(path.resolve('./public')));
 app.use('/static',express.static(path.resolve('./node_modules/bootstrap')));
@@ -61,6 +64,7 @@ app.use('/static',express.static(path.resolve('./node_modules/@popperjs/core')))
 app.use('/static',express.static(path.resolve('./node_modules/@fortawesome/fontawesome-free')));
 
 app.use('/', indexRouter);
+app.use('/images', imagesRouter);
 
 //uso das rotas de usuarios
 app.use('/usuarios', usuariosRouter);

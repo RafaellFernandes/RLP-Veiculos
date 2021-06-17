@@ -17,12 +17,12 @@ module.exports = {
 
       ano_modelo: {
         allowNull: true,
-        type: Sequelize.DATEONLY
+        type: Sequelize.INTEGER(4)
       },
 
       ano_fabricacao: {
         allowNull: true,
-        type: Sequelize.DATEONLY
+        type: Sequelize.INTEGER(4)
       },
 
       valor: {

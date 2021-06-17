@@ -148,14 +148,15 @@
 				<!-- End of Topbar -->
 
 				<!-- Begin Page Content -->
-				<div class="container-fluid">
-					<form method="POST" action="/save-veiculos">
+				<div class="container-fluid" id="mainform">
+					<form method="POST" action="/save-veiculos" enctype="multipart/form-data">
 						<div class="row">
+							
 							<div class="col-8 form-group">
 								<label class="form-label">
 									Modelo
 								</label>
-								<input type="text" name="modelo" class="form-control" maxlength="50" required>
+								<input type="text" name="modelo" class="form-control" maxlength="30" required>
 							</div>
 							<div class="col-8 form-group">
 								<label class="form-label">
@@ -185,29 +186,34 @@
 									<option value="seminovo">Seminovo</option>
 								</select>
 							</div>
-							<form class="mt-4" action="/upload" method="POST" enctype="multipart/form-data">
 								<div class="col-8 form-group">
 									<label class="form-label">
 										Foto
 									</label>
-									<input type="file" name="foto_destaque" class="form-control-file border">
+									<input type="file" name="uploaded_image" class="form-control-file border">
 								</div>
-							</form>
 							<div class="col-8 form-group">
 								<label class="form-label">
 									Marca
 								</label>
 								<select name="marca_id" class="form-control">
 									<option value="1">bmw</option>
+									<option value="2">toyota</option>
+									<option value="3">honda</option>
+									<option value="4">ford</option>
+									<option value="5">fiat</option>
+									<option value="6">chevrolet</option>
 								</select>
-								
 							</div>
 							<div class="col-8 form-group">
 								<label class="form-label">
 									Cor
 								</label>
 								<select name="cor_id" class="form-control">
-									<option value="1">amarelo</option>
+									<option value="1">prata</option>
+									<option value="2">preto</option>
+									<option value="3">branco</option>
+									<option value="4">vermelho</option>
 								</select>
 							</div>
 							<div class="col-8 form-group">
@@ -216,6 +222,7 @@
 								</label>
 								<select name="usuario_id" class="form-control">
 									<option value="1">admin</option>
+									<option value="2">usuario</option>
 								</select>
 							</div>
 							<div class="col-8 form-group">

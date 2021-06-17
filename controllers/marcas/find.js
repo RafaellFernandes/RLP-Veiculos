@@ -7,7 +7,6 @@ module.exports = {
         const result = await Marcas.findAll({
             attributes: ['id', 'marca']
         });
-
             res.render('marcas/marcas', {data: result});
     },
 

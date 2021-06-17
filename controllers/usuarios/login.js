@@ -26,7 +26,8 @@ module.exports = {
             if (compara === true) {
                 res.redirect('/');
                 return res.json({
-                    message: "Logado!"
+                    message: "Logado! ",
+                    token: token
                 });
             } else {
                 return res.json({

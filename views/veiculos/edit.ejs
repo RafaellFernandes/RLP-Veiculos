@@ -149,7 +149,7 @@
 
 				<!-- Begin Page Content -->
 				<div class="container-fluid">
-					<form method="POST" action="/update-veiculos">
+					<form method="POST" action="/update-veiculos" enctype="multipart/form-data">
 						<div class="row">
 							<div class="col-8 form-group">
 								<label class="form-label">
@@ -162,13 +162,13 @@
 								<label class="form-label">
 									Ano do Modelo
 								</label>
-								<input type="text" name="ano_modelo" class="form-control" value="<%=data.ano_modelo %>">
+								<input type="number" name="ano_modelo" class="form-control" value="<%=data.ano_modelo %>">
 							</div>
 							<div class="col-8 form-group">
 								<label class="form-label">
 									Ano de Fabricação
 								</label>
-								<input type="text" name="ano_fabricacao" class="form-control"
+								<input type="number" name="ano_fabricacao" class="form-control"
 									value="<%=data.ano_fabricacao %>">
 							</div>
 							<div class="col-8 form-group">
@@ -181,13 +181,16 @@
 								<label class="form-label">
 									Tipo
 								</label>
-								<input type="text" name="tipo" class="form-control" value="<%=data.tipo %>">
+								<select name="tipo" class="form-control">
+									<option value="novo">Novo</option>
+									<option value="seminovo">Seminovo</option>
+								</select>
 							</div>
 							<div class="col-8 form-group">
 								<label class="form-label">
 									Foto
 								</label>
-								<input type="text" name="foto_destaque" class="form-control"
+								<input type="file" name="uploaded_image" class="form-control-file border"
 									value="<%=data.foto_destaque %>">
 							</div>
 							<div class="col-8 form-group">
